@@ -58,6 +58,7 @@ This guide walks you through configuring DragonFlyBSD and installing the Calm Wi
    If the test is successful, proceed to the next step. If not, troubleshoot your Xorg configuration.
 
 4. **Load a Kernel module**
+
    Run this command as root:
    ```sh
    kldload i915
