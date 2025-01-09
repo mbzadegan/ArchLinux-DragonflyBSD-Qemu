@@ -109,4 +109,4 @@ This guide walks you through configuring DragonFlyBSD and installing the Calm Wi
 - For detailed configuration options, refer to the [CWM manual](https://man.openbsd.org/cwm).
 - If you encounter issues, check the logs in `/var/log/Xorg.0.log` or run `dmesg` for system messages.
 
-Happy computing!
+Happy DragonflyBSD computing!
