@@ -30,7 +30,6 @@ This guide walks you through configuring DragonFlyBSD and installing the Calm Wi
    ```sh
    pkg install nano
    ```
-
 ---
 
 ## Step 2: Install Xorg
