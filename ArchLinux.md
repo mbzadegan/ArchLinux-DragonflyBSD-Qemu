@@ -1,4 +1,4 @@
-# Preparing Bare Installed Arch Linux for HPC and Multi-thread Programming
+# Preparing Bare Installed Arch-Linux for HPC and Multi-thread Programming
 
 This guide provides the steps to configure your Arch Linux system for high-performance computation (HPC) and multi-thread programming.
 
