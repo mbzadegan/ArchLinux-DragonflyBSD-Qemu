@@ -1,4 +1,4 @@
-# Configuring DragonFlyBSD and Installing CWM
+# Configuring DragonFlyBSD and Installing the Calm Window Manager (CWM)
 
 This guide walks you through configuring DragonFlyBSD and installing the Calm Window Manager (CWM).
 
