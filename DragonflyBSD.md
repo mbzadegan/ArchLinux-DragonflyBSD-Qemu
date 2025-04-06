@@ -10,7 +10,7 @@ This guide walks you through configuring DragonFlyBSD and installing the Calm Wi
 
 ## Step 1: Configure DragonFlyBSD and install the Xorg
 
-1. **Log in as Root or a User with Sudo Privileges**
+1. **Log in as Root or a User with Sudo Privileges **
    After logging in, ensure you have root privileges to perform system updates and installations.
 
 2. **Update the System**
