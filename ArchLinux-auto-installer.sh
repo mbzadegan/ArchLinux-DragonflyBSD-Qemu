@@ -46,12 +46,12 @@ HOSTS
 # Root password
 echo "root:$ROOT_PASSWORD" | chpasswd
 
-# Enable systemd services
+# Enable services
 systemctl enable systemd-networkd
 systemctl enable systemd-resolved
 systemctl enable sshd
 
-# Configure Ethernet DHCP and DNS
+# Configure network with static DNS
 cat <<NET > /etc/systemd/network/20-wired.network
 [Match]
 Name=en*
@@ -66,8 +66,11 @@ UseDNS=false
 DNS=8.8.8.8
 NET
 
-# Override stub resolver with static one
+# Static DNS entry
 echo "nameserver 8.8.8.8" > /etc/resolv.conf
+
+# Colorful Bash prompt for root (yellow)
+echo 'PS1="\[\e[1;33m\]\u@\h \W \$\[\e[0m\] "' >> /root/.bashrc
 
 # Install GRUB (UEFI)
 pacman -S --noconfirm grub efibootmgr
