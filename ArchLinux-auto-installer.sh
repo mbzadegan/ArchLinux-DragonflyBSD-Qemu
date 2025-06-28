@@ -51,19 +51,25 @@ systemctl enable systemd-networkd
 systemctl enable systemd-resolved
 systemctl enable sshd
 
-# Configure simple DHCP for Ethernet
+# Configure Ethernet DHCP and DNS
 cat <<NET > /etc/systemd/network/20-wired.network
 [Match]
 Name=en*
 
 [Network]
 DHCP=yes
+
+[DHCP]
+UseDNS=false
+
+[DNS]
+DNS=8.8.8.8
 NET
 
-# Link resolv.conf
-ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
+# Override stub resolver with static one
+echo "nameserver 8.8.8.8" > /etc/resolv.conf
 
-# Install and configure GRUB (UEFI)
+# Install GRUB (UEFI)
 pacman -S --noconfirm grub efibootmgr
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
